@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
-    title: "my-portfolio",
+    title: "JuliaJS",
+    author: "Julia Vavrinyuk"
   },
   plugins: [
     "gatsby-plugin-styled-components",
