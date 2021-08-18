@@ -2,11 +2,15 @@ module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
     title: "JuliaJS",
-    author: "Julia Vavrinyuk"
+    author: "Julia Vavrinyuk",
+    description: "A Personal Website For Julia Vavrinyuk",
   },
   plugins: [
+    "gatsby-plugin-react-helmet",
     "gatsby-plugin-styled-components",
     "gatsby-plugin-sitemap",
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
@@ -22,5 +26,13 @@ module.exports = {
       },
       __key: "pages",
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "blog",
+        path: "./src/posts"
+      }
+    },
+    "gatsby-transformer-remark"
   ],
 };
